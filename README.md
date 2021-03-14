@@ -1,12 +1,12 @@
 # plant Defense!
-A game for the 2020 Spring Jam: Add link here...
+A game for the 2020 Spring Jam: https://itch.io/jam/great-spring-game-jam-2021
 
 
 ### Controls
 WASD Move
-Click plants
+Click menu buttons for planting plants
 
 ### Plant Types!
 - Defense
 - Points
-- Augment/Booster
+- Seed (called Augment in the code)
