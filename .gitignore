@@ -1,0 +1,41 @@
+ln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Any image or video created by the Recorder package
+/Recordings/
+
+# Package related files that can be ignored or are better kept user-specific
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
+ProjectSettings/Packages/com.unity.polybrush/Settings.json
+/ProjectSettings/Packages/com.unity.progrids/Settings.json
+Assets/Polybrush Data*
+Assets/PolybrushData*
+
+# Asset Bundles folder and .bin file
+/Assets/StreamingAssets
+*.bin
