@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(transform.gameObject);
         gameActive = true;
         StartCoroutine(IncreaseDay());
     }
@@ -90,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateDayText()
     {
+        if (!dayText) return; // Can be called late afteer scene unloads
         dayText.text = FormatDay(currentDay) + " day of Spring";
     }
 

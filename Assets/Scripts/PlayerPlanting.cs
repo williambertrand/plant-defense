@@ -50,7 +50,7 @@ public class PlayerPlanting : MonoBehaviour
         if (Player.Instance.seedCount < toPlant.prefab.seedCost)
         {
             PlantMenuSystem.Instance.Notify("You don't have enough seeds for that plant!", 1.5f);
-            return;
+            return; 
         }
 
         Vector3 delta = new Vector3(0.0f, 0.15f, 0.0f);

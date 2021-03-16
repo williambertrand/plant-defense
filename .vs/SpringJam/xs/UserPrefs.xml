@@ -1,27 +1,28 @@
 ﻿<Properties StartupConfiguration="{08460583-DEAA-79C0-6A42-4AFC150C2ACB}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GridObject.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy/Enemy.cs" Line="160" Column="40" IsPinned="True" />
-      <File FileName="Assets/Scripts/Enemy/EnemyManager.cs" Line="101" Column="28" IsPinned="True" />
-      <File FileName="Assets/Scripts/GameConstants.cs" Line="27" Column="40" />
-      <File FileName="Assets/Scripts/GridObject.cs" Line="30" Column="14" />
-      <File FileName="Assets/Scripts/SeedSpawnManager.cs" Line="52" Column="37" />
+      <File FileName="Assets/Scripts/Enemy/Enemy.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/Enemy/EnemyManager.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="93" Column="1" />
+      <File FileName="Assets/Scripts/GameConstants.cs" />
+      <File FileName="Assets/Scripts/GridObject.cs" Line="41" Column="6" />
+      <File FileName="Assets/Scripts/SeedSpawnManager.cs" />
       <File FileName="Assets/Scripts/Util/ObjectPooler.cs" />
-      <File FileName="Assets/Scripts/Plants/PlantMenuSystem.cs" Line="117" Column="43" />
+      <File FileName="Assets/Scripts/Plants/PlantMenuSystem.cs" />
       <File FileName="Assets/Scripts/Seed.cs" />
-      <File FileName="Assets/Scripts/GridObjectDamageable.cs" Line="6" Column="42" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="20" Column="5" />
-      <File FileName="Assets/Scripts/Plants/SeedPlant.cs" Line="41" Column="10" />
-      <File FileName="Assets/Scripts/Plants/DefensePlant.cs" Line="39" Column="1" />
-      <File FileName="Assets/Scripts/GameStats.cs" Line="3" Column="64" />
-      <File FileName="Assets/Scripts/GameOverMenu.cs" Line="20" Column="45" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="111" Column="20" />
+      <File FileName="Assets/Scripts/GridObjectDamageable.cs" />
+      <File FileName="Assets/Scripts/MainMenu.cs" />
+      <File FileName="Assets/Scripts/Plants/SeedPlant.cs" />
+      <File FileName="Assets/Scripts/Plants/DefensePlant.cs" />
+      <File FileName="Assets/Scripts/GameStats.cs" />
+      <File FileName="Assets/Scripts/GameOverMenu.cs" />
+      <File FileName="Assets/Scripts/UrlOpeneer.cs" />
       <File FileName="Assets/Scripts/Player.cs" Line="25" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/Plants/PointPlant.cs" Line="20" Column="51" NotebookId="1" />
-      <File FileName="Assets/Scripts/Plants/PlantManager.cs" Line="48" Column="9" NotebookId="1" />
-      <File FileName="Assets/Scripts/PlayerPlanting.cs" Line="61" Column="37" NotebookId="1" />
-      <File FileName="Assets/Scripts/GameGrid.cs" Line="10" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/TopDownCharacterController.cs" Line="113" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/Plants/PointPlant.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Plants/PlantManager.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/PlayerPlanting.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameGrid.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/TopDownCharacterController.cs" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -47,7 +48,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c99756d2-5c7b-4ef2-b33f-1b08018ea5c9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="46afd34c-809d-42c3-bb03-99c9ab34062d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

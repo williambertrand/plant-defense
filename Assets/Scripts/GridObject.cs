@@ -40,13 +40,6 @@ public class GridObject : MonoBehaviour
         this.gridPositon = pos;
     }
 
-
-    /* For testing */
-    private void OnDrawGizmos()
-    {
-        Handles.Label(transform.position, "Pos: (" + gridPositon.x + ", " + gridPositon.y + ")");
-    }
-
     public void UpdatePosition()
     {
         gridPositon = GameGrid.Instance.WorldLocationToPos(transform.position);

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Cainos/Pixel Art Top Down - Basic/Scene/MainGameScene.unity
+- path: Assets/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
