@@ -144,7 +144,7 @@ MonoBehaviour:
   basePointRate: 0
   currentPointVal: 0
   newPoints: 0
-  seedCost: 5
+  seedCost: 8
   growTime: 10
   currentState: 0
   range: 5

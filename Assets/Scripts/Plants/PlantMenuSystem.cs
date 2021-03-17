@@ -85,7 +85,7 @@ public class PlantMenuSystem : MonoBehaviour
            "rose",
            "#69cfef",
            "rose-icon-bg",
-           3
+           4
         );
 
         PlantInfo defenseNettle = new PlantInfo(
@@ -93,7 +93,7 @@ public class PlantMenuSystem : MonoBehaviour
             "nettle",
             "#d1b3ff",
             "nettle-icon-bg",
-            6
+            8
         );
 
         defensePlantList.Add(defenseRose);
@@ -109,7 +109,7 @@ public class PlantMenuSystem : MonoBehaviour
            "daffodil",
            "#d1b3ff",
            "daffodil-icon-bg",
-           4
+           5
         );
 
         PlantInfo pointTulip = new PlantInfo(

@@ -126,7 +126,8 @@ MonoBehaviour:
   pointMultiplier: 0
   basePointRate: 0
   currentPointVal: 0
-  seedCost: 6
+  newPoints: 0
+  seedCost: 10
   growTime: 10
   currentState: 0
   seedTime: 10
