@@ -147,11 +147,12 @@ MonoBehaviour:
   plantName: Daffodil
   spriteId: 001
   color: 
+  healthAgeRate: 0.5
   plantType: 1
   age: 0
   plantedAt: 0
-  pointMultiplier: 0.75
-  basePointRate: 0.3
+  pointMultiplier: 0.45
+  basePointRate: 0.2
   currentPointVal: 0
   newPoints: 0
   seedCost: 5

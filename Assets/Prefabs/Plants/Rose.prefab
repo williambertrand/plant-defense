@@ -121,19 +121,28 @@ MonoBehaviour:
   plantName: Rose
   spriteId: rose01
   color: '#fff'
+  healthAgeRate: 0.25
   plantType: 0
   age: 0
   plantedAt: 0
   pointMultiplier: 1
   basePointRate: 2
   currentPointVal: 0
+  newPoints: 0
   seedCost: 4
   growTime: 12
   currentState: 0
+  attackType: ranged
   range: 3
-  attackSpeed: 0.5
+  baseRange: 3
+  rangeAgeFactor: 0.125
+  attackSpeed: 1
+  attackSpeedBase: 1
+  attackSpeedAgeFactor: 0.1
+  minAttackSpeed: 0.25
   lastAttack: 0
   attackDamage: 2
+  attackDamageAgeFactor: 0.25
   target: {fileID: 0}
   attackPrefabTag: petal
   projectileSpeed: 4

@@ -33,7 +33,7 @@ public class PlantManager : MonoBehaviour
         activePlants = new ArrayList();
 
         // Plant starter daffodil
-        PlantStarterPlant("daffodil", new Point(0, 0));
+        PlantStarterPlant("rose", new Point(0, 0));
     }
 
     public void OnPlantDidActivate(Plant p, Point gridPos)
@@ -51,6 +51,17 @@ public class PlantManager : MonoBehaviour
     public bool PlantExistis(Point loc)
     {
         return plants.ContainsKey(loc) && plants[loc] != null;
+    }
+
+    public Plant GetPlant(Point loc)
+    {
+        if (plants.ContainsKey(loc))
+        {
+            return plants[loc];
+        } else
+        {
+            return null;
+        }
     }
 
     public void OnPlantDeactivate(Plant p)
@@ -77,8 +88,10 @@ public class PlantManager : MonoBehaviour
     {
         foreach(Plant p in activePlants)
         {
-            p.age += 1;
+            p.OnIncreaseAge();
         }
+
+
     }
 
 

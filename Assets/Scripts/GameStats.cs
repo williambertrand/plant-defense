@@ -88,4 +88,14 @@ public static class GameStats
     }
 
 
+    public static void Clear()
+    {
+        plants = 0;
+        points = 0;
+        plantsLost = 0;
+        bugs = 0;
+        days = 0;
+    }
+
+
 }

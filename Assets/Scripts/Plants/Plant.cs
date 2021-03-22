@@ -25,6 +25,7 @@ public class Plant : GridObjectDamageable
     public string plantName;
     public string spriteId;
     public string color; // The hex color to use as a background for the ui element
+    public float healthAgeRate;
 
     /* All plants have: 
      *  a type
@@ -91,7 +92,7 @@ public class Plant : GridObjectDamageable
             case PlantType.POINTS:
                 return "Point";
             case PlantType.AUGMENT:
-                return "Booster";
+                return "Seed";
             default:
                 return "Unknown";
         }
@@ -123,6 +124,14 @@ public class Plant : GridObjectDamageable
         PlantManager.Instance.OnPlantDeactivate(this);
         base.OnDeath();
         Destroy(gameObject);
+    }
+
+    public virtual void OnIncreaseAge()
+    {
+        age += 1;
+        maxHealth = health + (int)(healthAgeRate * age);
+        // Each plant regains one health per day
+        if (health < maxHealth) health += 1;
     }
 
     public override string ToString()

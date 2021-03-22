@@ -24,6 +24,17 @@ public class TopDownCharacterController : GridObject
     private Animator animator;
     private SpriteRenderer renderer;
 
+    #region Singleton
+    public static TopDownCharacterController Instance;
+    private void Awake()
+    {
+     if(Instance == null)
+        {
+            Instance = this;
+        }   
+    }
+    #endregion
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -36,26 +47,26 @@ public class TopDownCharacterController : GridObject
     private void Update()
     {
         Vector2 dir = Vector2.zero;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             dir.x = -1;
             animator.SetInteger("Direction", 3);
             direction = GridDirection.LEFT;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             dir.x = 1;
             animator.SetInteger("Direction", 2);
             direction = GridDirection.RIGHT;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             dir.y = 1;
             animator.SetInteger("Direction", 1);
             direction = GridDirection.UP;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             dir.y = -1;
             animator.SetInteger("Direction", 0);

@@ -38,7 +38,8 @@ public class Enemy : GridObjectDamageable
     /* Tune how much stronger the enemy gets over time */
     public int levelHealth;
     public float levelAttackFactor;
-    public int levelDamage;
+    public float levelDamage;
+    public float levelSpeedFactor;
 
     // Start is called before the first frame update
     protected override void Start()

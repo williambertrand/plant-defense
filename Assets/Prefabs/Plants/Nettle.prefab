@@ -137,6 +137,7 @@ MonoBehaviour:
   plantName: Nettle
   spriteId: nettle01
   color: 
+  healthAgeRate: 0
   plantType: 0
   age: 0
   plantedAt: 0
@@ -147,10 +148,17 @@ MonoBehaviour:
   seedCost: 8
   growTime: 10
   currentState: 0
-  range: 5
-  attackSpeed: 0.25
+  attackType: ranged
+  range: 4
+  baseRange: 4
+  rangeAgeFactor: 0.2
+  attackSpeed: 0.35
+  attackSpeedBase: 0.4
+  attackSpeedAgeFactor: 0.05
+  minAttackSpeed: 0.15
   lastAttack: 0
   attackDamage: 1
+  attackDamageAgeFactor: 0.5
   target: {fileID: 0}
   attackPrefabTag: thorn
   projectileSpeed: 5

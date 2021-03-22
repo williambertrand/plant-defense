@@ -120,6 +120,7 @@ MonoBehaviour:
   plantName: Sunflower
   spriteId: sunflower01
   color: 
+  healthAgeRate: 1
   plantType: 2
   age: 0
   plantedAt: 0

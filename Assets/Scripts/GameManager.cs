@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         gameActive = true;
         StartCoroutine(IncreaseDay());
+        GameStats.Clear();
     }
 
     // TODO: Potentially only update score here and in the plant update after an interval of frames has elapsed:
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private string FormatDay(int day)
+    public static string FormatDay(int day)
     {
 
         if (day >= 10 &&  day <= 20)

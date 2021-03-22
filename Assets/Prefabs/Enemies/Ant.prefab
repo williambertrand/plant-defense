@@ -120,8 +120,8 @@ MonoBehaviour:
   health: 5
   maxHealth: 0
   damageColor: {r: 1, g: 1, b: 1, a: 0}
-  damage: 2
-  damageBase: 2
+  damage: 1
+  damageBase: 1
   attackRange: 0.6
   maxHealthBase: 4
   moveSpeed: 1.5
@@ -132,9 +132,10 @@ MonoBehaviour:
   state: 0
   lastAttack: 0
   attackTime: 2.5
-  levelHealth: 2
+  levelHealth: 1
   levelAttackFactor: 0.1
-  levelDamage: 0
+  levelDamage: 0.5
+  levelSpeedFactor: 0.05
 --- !u!50 &-1405419208691356993
 Rigidbody2D:
   serializedVersion: 4

@@ -48,10 +48,15 @@ public class PlantMenuSystem : MonoBehaviour
     public List<Button> openMenuOptions;
 
     // Highlighted plant info view
-    public Canvas infoPlantView;
+    public GameObject infoPlantView;
     public Text infoPlantTitle;
     public Text infoPlantAge;
     public Text infoPlantHealth;
+    public Text infoPlantRange;
+
+    public Button digupPlantButton;
+
+    public GameObject infoPopup;
 
 
     // Sub canvas for damage type plants
@@ -96,8 +101,17 @@ public class PlantMenuSystem : MonoBehaviour
             8
         );
 
+        PlantInfo defenseHedge = new PlantInfo(
+            "Hedge (Melee)",
+            "hedge",
+            "#d1b3ff",
+            "hedge-icon-bg",
+            12
+        );
+
         defensePlantList.Add(defenseRose);
         defensePlantList.Add(defenseNettle);
+        defensePlantList.Add(defenseHedge);
         PlantOptions.menuOptions.Add(PlantType.DEFENSE, defensePlantList);
 
 
@@ -120,8 +134,17 @@ public class PlantMenuSystem : MonoBehaviour
            8
         );
 
+        PlantInfo pointOrchid = new PlantInfo(
+           "Orchid",
+           "orchid",
+           "#f8c868",
+           "orchid-icon-bg",
+           20
+        );
+
         pointPlantList.Add(pointDaffodil);
         pointPlantList.Add(pointTulip);
+        pointPlantList.Add(pointOrchid);
         PlantOptions.menuOptions.Add(PlantType.POINTS, pointPlantList);
 
 
@@ -158,6 +181,14 @@ public class PlantMenuSystem : MonoBehaviour
 
         menuHolder.enabled = false;
         openTitleText.text = "Title";
+
+        StartCoroutine(DismissInfoPopup());
+    }
+
+    IEnumerator DismissInfoPopup()
+    {
+        yield return new WaitForSeconds(6.0f);
+        infoPopup.SetActive(false);
     }
 
     private void AddTitleForType(PlantType t)
@@ -258,18 +289,37 @@ public class PlantMenuSystem : MonoBehaviour
         PlayerPlanting.Instance.PlantSeedling(id);
     }
 
+    public void OnClickDigUpPlant()
+    {
+        Point? loc = TopDownCharacterController.Instance.focusPoint;
+        if (loc == null) return;
+        Plant p = PlantManager.Instance.GetPlant((Point)loc);
+        Debug.Log(p.ToString());
+        if (p == null)
+        {
+            return;
+        }
+        else
+        {
+            PlantManager.Instance.OnPlantDeactivate(p);
+            p.OnDeath();
+        }
+        digupPlantButton.enabled = false;
+    }
+
     public void OnPlantHighlighted(Plant p)
     {
         // Pass in a null plant to de-select
         if(p == null)
         {
-            infoPlantView.enabled = false;
+            infoPlantView.SetActive(false);
             defensePlantView.enabled = false;
             pointPlantView.enabled = false;
             return;
         }
 
-        infoPlantView.enabled = true;
+        infoPlantView.SetActive(true);
+        digupPlantButton.enabled = true;
         infoPlantTitle.text = p.plantName;
         infoPlantAge.text = "" + p.age;
         infoPlantHealth.text = "" + p.health + "/" + p.maxHealth;
@@ -278,6 +328,7 @@ public class PlantMenuSystem : MonoBehaviour
             DefensePlant defP = (DefensePlant) p;
             infoPlantDamage.text = "" + defP.attackDamage;
             infoPlantAttackSpeed.text = "" + defP.attackSpeed.ToString("F2");
+            infoPlantRange.text = defP.range.ToString();
             defensePlantView.enabled = true;
             pointPlantView.enabled = false;
         }
@@ -288,7 +339,6 @@ public class PlantMenuSystem : MonoBehaviour
             infoPlantPointRate.text = "" + pp.pointRate.ToString("F2");
             pointPlantView.enabled = true;
             defensePlantView.enabled = false;
-
         }
     }
 

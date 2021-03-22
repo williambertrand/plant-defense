@@ -120,11 +120,12 @@ MonoBehaviour:
   plantName: Tulip
   spriteId: 
   color: 
+  healthAgeRate: 0.25
   plantType: 1
   age: 0
   plantedAt: 0
-  pointMultiplier: 2
-  basePointRate: 4
+  pointMultiplier: 0.65
+  basePointRate: 0.35
   currentPointVal: 0
   newPoints: 0
   seedCost: 8

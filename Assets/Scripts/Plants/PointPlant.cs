@@ -16,7 +16,7 @@ public class PointPlant : Plant
 
         if (currentState == PlantState.GROWING) return;
 
-        pointRate = basePointRate * (pointMultiplier * age);
+        pointRate = basePointRate * (pointMultiplier * (age + 1));
         float points = pointRate * Time.deltaTime;
         currentPointVal += points;
         newPoints += points;
